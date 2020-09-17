@@ -1,5 +1,7 @@
 package fr.dauphine.ja.daillethomas.td00;
 
+import java.util.ArrayList;
+
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -35,4 +37,34 @@ public class PrimeCollectionTest
     {
         assertTrue( true );
     }
+    
+    
+    /**
+     * test0IsPrime(), testTwoIsPrime() et test9IsNotPrime(),
+qui verient respectivement que la fonction isPrime de PrimeCollection fonc-
+tionne correctement lorsqu'on l'execute avec l'argument 0, 2 et 9.
+     */
+    
+    public void test0IsPrime()
+    {
+    	ArrayList<Integer> list = new ArrayList<>();
+        PrimeCollection pm1 = new PrimeCollection(list);
+        assertTrue(pm1.isPrime(0));
+    }
+    
+    public void testTwoIsPrime()
+    {
+    	ArrayList<Integer> list = new ArrayList<>();
+        PrimeCollection pm1 = new PrimeCollection(list);
+        assertTrue(pm1.isPrime(2));
+    }
+    
+    public void test9IsNotPrime()
+    {
+    	ArrayList<Integer> list = new ArrayList<>();
+        PrimeCollection pm1 = new PrimeCollection(list);
+        assertFalse(pm1.isPrime(9));
+    }
+    
+    
 }

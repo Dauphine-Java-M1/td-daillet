@@ -36,3 +36,7 @@ EXERCICE 2
 3. relié par un trait
 5. ne fonctionne pas car on est pas synchronisé
 6. il contient les modification que j'avais fait sur javaavance-clone. Git a recuoere ce que j'avais push sur le serveur pour le mettre dans le javaavance original.
+
+EXERCICE 3
+
+2. Assert true verifie que le parametre passé est bien true. Le test echoue si false.
