@@ -21,3 +21,5 @@ EXERCICE 3
 5. main + CTRL + ESPACE est un raccourci pour main(String[] args).
 6. ces raccourcis permettent d'obtenir les getters et setters de l'attribut.
 7. permet de renamer la classe ou l'attribut dans tout le projet.
+
+modif fin de fichier
