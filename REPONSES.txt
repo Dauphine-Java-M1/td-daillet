@@ -1,4 +1,4 @@
-Thomas DAILLE modif
+Thomas DAILLE
 
 EXERCICE 1
 
@@ -22,4 +22,17 @@ EXERCICE 3
 6. ces raccourcis permettent d'obtenir les getters et setters de l'attribut.
 7. permet de renamer la classe ou l'attribut dans tout le projet.
 
-modif fin de fichier
+TD00bis
+
+EXERCICE 1
+
+5. on observe les difference entre la derniere version enregistrer dans git et l'actuelle
+8. a64446735f90a6449149e8ad0108ce4fd23d7ae7
+9. $ git diff a64446735f90a6449149e8ad0108ce4fd23d7ae7 76a6cdef4098c08e84dfbf15ff057f 35e87ded96
+10. $ git diff HEAD HEAD^
+
+EXERCICE 2
+
+3. relié par un trait
+5. ne fonctionne pas car on est pas synchronisé
+6. il contient les modification que j'avais fait sur javaavance-clone. Git a recuoere ce que j'avais push sur le serveur pour le mettre dans le javaavance original.
