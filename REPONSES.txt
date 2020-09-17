@@ -1,0 +1,23 @@
+Thomas DAILLE
+
+EXERCICE 1
+
+4. version 3.6.3
+5. L'archetypeID correspond au nom du projet et le groupeID au nom du 
+package. Ce dernier doit être unique. 
+6. Le dossier src contient le main et les tests.
+8. Le classpath correspond au chemin, à l'adresse d'un fichier/repertoire.
+13. Cette propriété sert a compiler le projet. On doit lui renseigner la 
+valeur 1.8.
+
+EXERCICE 2
+
+1. problème d'accès
+
+EXERCICE 3
+
+3. sysout + CTRL + ESPACE est un raccourci pour System.out.println();
+4. toStr + CTRL + ESPACE est un raccourci pour la fonction toString().
+5. main + CTRL + ESPACE est un raccourci pour main(String[] args).
+6. ces raccourcis permettent d'obtenir les getters et setters de l'attribut.
+7. permet de renamer la classe ou l'attribut dans tout le projet.
