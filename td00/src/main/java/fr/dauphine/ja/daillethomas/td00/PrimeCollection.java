@@ -64,7 +64,7 @@ public class PrimeCollection
     {       
         ArrayList<Integer> list = new ArrayList<>();
         PrimeCollection pm1 = new PrimeCollection(list);
-        pm1.initRandom(100, 1000);
+        pm1.initRandom(100, 2000);
         System.out.println("Notre liste "+pm1.getNumbers());
         pm1.printPrimes();
     }
