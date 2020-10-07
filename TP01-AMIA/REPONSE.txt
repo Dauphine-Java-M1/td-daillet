@@ -15,3 +15,8 @@ EXERCICE 1 - POINT
 	}
 
 EXERCICE 2 - EGALITE
+1) true car p2 et p1 on la même adresse mémoire
+false car p1 et p3 ont deux adresses différents
+3) preciser que c'est un ArrayList de Point. p3 devrai renvoyer 0 car le point p1(1,2) y est. on doit modifier le equals.
+
+EXERCICE 3 - LIGNE BRISE 
