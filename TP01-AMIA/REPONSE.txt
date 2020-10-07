@@ -1,0 +1,17 @@
+
+EXERCICE 1 - POINT
+
+1) présence d'un constructeur par défault.
+2) on ne peut acceder aux champs privés, on peut y remedier en faisant des getters/setter ou en passant x et y en public/package.
+3) on met les champs en privé pour évité qu'ils soient modifier ailleurs dans le code
+4) permet d'acceder aux attribut d'une classe. Il faut les faire ici.
+5) le constructeur par défault n'existe plus, il faut modifier les appels à Point.
+6) on doit utiliser this
+7) on crée un attribut static compteur, que l'on incrémente dans le constructeur.
+8) en fonction des paramètres
+9)      @Override
+	public String toString() {
+		return "(" + x + ", " + y + ")";
+	}
+
+EXERCICE 2 - EGALITE
