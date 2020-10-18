@@ -19,4 +19,17 @@ EXERCICE 2 - EGALITE
 false car p1 et p3 ont deux adresses différents
 3) preciser que c'est un ArrayList de Point. p3 devrai renvoyer 0 car le point p1(1,2) y est. on doit modifier le equals.
 
-EXERCICE 3 - LIGNE BRISE 
+EXERCICE 3 - LIGNE BRISEE 
+2) si n ajoute pas de contrôle, on peut dépasser la capacité max du tableau fixé par l'utilisateur. Pour palier a ce problème, on ajoute une vérification sur la taille maximum.
+5) brokenline.contains(null)) renvoie false. On peut faire un add(null), cepandant lorsque l'on appel contains, on a java.lang.NullPointerException.  
+6) ces méthodes ne changent pas. On adapte simplement les méthode de tableau à celles de LinkedList.
+
+EXERCICE 4 - MUTABILITE ET CERCLE
+1) public void translate(int dx, int dy). On pourrait remplacer x par dx et y par dy, on peut multiplier x par dx et y par dy, on peut diviser... etc.
+5) Les deux cercles on translaté car on modifie les coordonnées du centre et que les deux cercle le partage. On doit faire en sorte que chaque cercle ait son propre centre.
+6) le code appel translate de point et nom de cercle. On bouge le centre mais pas le cercle.
+9) oui car elle ne dépend que de ses paramètres et non de l'instance sur laquelle elle est appelé.
+
+EXERCICE 5 - ANNEAUX
+1) c'est intéressant car on va pouvoir récupérer les attributs et les methodes de cercle. On peut considerer qu'un anneau est un sous-type de cercle.
+4) appel le toString de Circle. On doit Override cette dernière dans Ring

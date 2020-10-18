@@ -6,6 +6,7 @@ public class Point {
 	
 	private int x,y;
 	private static int cpt;
+
 	
 	public int getX() {
 		return x;
@@ -52,6 +53,14 @@ public class Point {
 		
 		Point p2 = (Point) o2;
 		return x == p2.x && y == p2.y;
+	}
+	
+//	Ajouter une methode translate(dx, dy) a Point. Quelles sont les differentes
+//	signatures et possibilitees pour cette methode ?
+	
+	public void translate(int dx, int dy) {
+		x = dx;
+		y = dy;
 	}
 
 	public static void main(String[] args) {
