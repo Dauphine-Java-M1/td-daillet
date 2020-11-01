@@ -1,0 +1,86 @@
+EXERCICE 1 - REDEFINITION
+
+1) 42 - affiche la valeur retourner par la methode meth() de Mere.
+42 - on appel printmeth() qui appel meth() de Mere.
+24 - affiche la valeur retourner par la methode meth() de Fille.
+24 - on appel printmeth() de Mere qui appel meth() qui a été écrasé dans Fille. printmeth() appel ici meth() de Fille.
+24 - c'est une Fille declaré comme étant une Mere. Comme c'est une Fille on appel meth() de Fille.
+24 - idem
+
+2) un object de type Fille dans Fille à accès au meth de Fille et au meth de Mere grâce au mot clef super.
+un object de type Fille dans Main à accès à un seul meth(), celui de Fille en faisant Fille.meth()
+
+3) si les methodes meth() sont statiques, on perd la liaison avec les instances.
+42 - pas de changement
+42 - pas de changement
+24 - pas de changement
+42 - on appel printmeth() sur une Fille. Printmeth() n'est pas static et a besoin d'appeler meth() qui est static. Printmeth() etant dans mere, il appel le meth() de Mere.
+42 - on appel sur un type declaré Mere. Comme methode statique, on a plus besoin d'instance, le compilateur ne va donc pas chercher meth() du type de l'instance (Fille) mais bien meth() du type declaré (Mere).
+42 - on appel printmeth() sur une Fille. Ca va chercher printmeth dans Mere. Comme meth() statique on prend meth() de Mere.
+
+4) meth sont maintenant des champs :
+42 - on affiche le champ meth d'une Mere.
+42 - on appel printMeth() d'une Mere qui affiche le champ meth de Mere.
+24 - on affiche le champ meth d'une Mere.
+42 - on appel printMeth() sur une Fille, on va chercher printMeth() dans Mere et on affiche champ meth de Mere.
+42 - attribut referencé avec le nom de leur classe. Comme on déclare une Mere, on va chercher le champ meth de Mere.
+42 - on appel printMeth() sur une Fille, on va chercher printMeth() dans Mere et on affiche champ meth de Mere.
+
+EXERCICE 2 - REDEFINITION SURCHARGE
+
+compilation = type déclaré
+exécution = type réel
+
+Mere a = New Fille
+Mere est le type déclaré et Fille le type réel
+
+1) MERE : import java.io.IOException;
+FILLE : 
+	- private void e()  = on ne peut pas reduire l'accessibilté d'une methode dans une classe fille par rapport a sa mere. On doit écrire public ou protected.
+	- char h() = on ne peut pas changer le type de retour d'une methode mere dans une fille. On écrit int h().
+	- int i = on ne peut pas changer un void en methode qui retourne un int.
+	- j() = import java.io.IOException;
+	- k() = on n epeut pas changer le type de l'exception retrouné
+MAIN :
+	- miage n'existe pas dans Mere et ne peut donc pas l'appeler sur une instance Mere.
+	- mereFille.miage(); = compilation KO mais execution OK. Le compilateur regarde le type déclaré (Mere) et donc ne comprend pas, tandis que l'exécution regarde le type réel.
+	
+2) OK
+
+3) une redefinition est une copie exacte de la signature de la fonction et du type de retour avec seulement le comportement qui change tandis que une surcharge prévoit de pouvoir changer les paramètres pour avoir une distinction entre l'original et la surcharge. 
+On regarde d'abord Mere :
+	c(Mere mere) = surcharge
+
+Dans Fille :
+	a() = redefinition
+	b(Fille fille) = redefinition
+	c(Mere mere) = redefinition
+	c(Fille b) = surcharge
+	d() = redefinition
+	d(Mere mere) = surcharge
+	f() = redefinition
+	g() = surcharge
+
+4)
+Miage : appel méthode miage() de Fille
+Miage : on cast en Fille l'objet. Son type de compilation est précisé, on rassure le compilateur su rle type Fille. On appel alors miage() de Fille.
+Mere_a : on appel méthode a() sur un objet Mere.
+Fille_a : a l'execution on regarde le type réel qui est Fille. On appel la redefinition de a() chez Fille.
+Fille_a : on appel a() sur une Fille
+Fille_a : le cast n'a pas d'effet. A l'execution on regarde le type réel qui est Fille. On appel la redefinition de a() chez Fille.
+Fille_b(Fille) : on accepte NULL comme étant une Fille. On regarde le type réel qui est une Fille donc c'est b() de Fille qui est appelé.
+Mere_c : appel c() de Fille qui est défini dans Mere (abscence de redefinition dans Fille)
+Fille_c(Mere) : on appel c(Mere mere) de Fille
+Fille_c(Mere) : en argument, le compilteur traite l'objet selon son type déclaré soit Mere. On appel donc c(Mere mere) de Fille
+Fille_c(Mere) : ?
+Fille_c(Fille) : on appel c(Fille fille) sur une fille, execution normal.
+static Mere_d : on appel la méthode static d() de Mere
+static Mere_d : comme methode static, on prend le type déclaré de l'objet et non sont type réel
+Mere_f : on appel printF() de Mere qui appel f() de Mere
+Mere_f : on appel printF() sur une Fille. Or printF() est déclaré uniquement dans Mere et lance f(). C'est donc f() de Mere qui est finalement lancé.
+Fille_j : on appel j() sur un type réel Fille donc on prend j() de Fille
+Mere_k : on appel k() sur une Fille, mais k() uniquement déclaré dans Mere. Fille récupere donc k() de Mere
+Fille_l : on appel l() sur une Fille
+Fille_m : on appel m() sur une Fille
+
+EXERCICE 3 EXPRESSIONS ARITHMETIQUES
